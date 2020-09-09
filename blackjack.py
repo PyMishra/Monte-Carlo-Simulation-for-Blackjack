@@ -1,7 +1,5 @@
 import random
 
-deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-
 def check_face_cards(card):
     '''Take in the card to check if it's a face card,
     and return the appropriate blackjack value'''
@@ -40,7 +38,7 @@ def total(hand):
             total += card
     return total
 
-def hit(hand):
+def hit(hand, deck):
     '''Pop the deck and deal the card to the needed hand,
     return the hand by reference'''
     card = deck.pop()
@@ -91,8 +89,8 @@ def score(dealer_hand, player_hand):
 
 def game(target):
     print('Game begins\n')
+    deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] * 4
     quit = 0
-
     dealer_hand = deal(deck)
     player_hand = deal(deck)
     print('Player, dealer', player_hand, dealer_hand) #for debugging
@@ -101,7 +99,7 @@ def game(target):
     while quit == 0:
         if total(player_hand) < target: # hit till a target
             print('Player hit')
-            hit(player_hand)
+            hit(player_hand, deck)
             print('Player hand', player_hand)
             if total(player_hand) > 21:
                 print('Bust, you lost')
@@ -110,7 +108,7 @@ def game(target):
             print('Player stays now')
             while total(dealer_hand) < 17:
                 print('Dealer hit')
-                hit(dealer_hand)
+                hit(dealer_hand, deck)
                 print('Dealer hand', dealer_hand)
                 if total(dealer_hand) > 21:
                     print('Dealer bust, you win')
@@ -118,5 +116,5 @@ def game(target):
             return score(dealer_hand, player_hand)
     return quit
             
-value = game(16)
-print(value)
+#value = game(16)
+#print(value)
