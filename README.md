@@ -3,7 +3,7 @@ Monte Carlo Simulation for discovering optimum winning strategy in the game of B
 
 ## Part I
 
-The first simulation attempts to discover a simple strategy for the player to keep hitting until a certain target is reached without taking into consideration what the dealer has.
+This simulation attempts to discover a simple strategy for the player to keep hitting until a certain target is reached without taking into consideration what the dealer has.
 
 Initial amount in the simulation has been set to 10,000 and the wager is fixed at 100 for all games. There are 5 different players with different target points that play a maximum of 1000 games. The games aren't continued if they go broke.
 
