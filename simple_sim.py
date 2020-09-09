@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import utils
 import numpy as np
 
-targets = [15, 16, 17, 18, 19]
+targets = [14, 15, 16, 17, 18, 19]
 win, draw, loss = [0] * len(targets), [0] * len(targets), [0] * len(targets)
 
 # Setting up two plots
@@ -37,7 +37,7 @@ for index in range(len(targets)):
     ax1.plot(xGame, yAmount, label=str(target))
     ax1.set_title('Amount vs Games')
     ax1.set_xlabel('Games')
-    ax1.set_ylabel('Amount')
+    ax1.set_ylabel('Amount (Bet size = {})'.format(wager))
     ax1.legend()
 
 # Plot bars for win, loss, draw with different strategies
@@ -53,4 +53,8 @@ ax2.set_xticklabels(targets)
 ax2.set_xlabel('Count')
 ax2.set_ylabel('Stop Target')
 ax2.legend()
-plt.show()
+#plt.show()
+
+# Save plots
+fig1.savefig('images/amount_plot.png', bbox_inches='tight')
+fig2.savefig('images/score_plot.png', bbox_inches='tight')
