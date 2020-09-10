@@ -7,8 +7,8 @@ targets = [14, 15, 16, 17, 18, 19]
 win, draw, loss = [0] * len(targets), [0] * len(targets), [0] * len(targets)
 
 # Setting up two plots
-fig1, ax1 = plt.subplots()
-fig2, ax2 = plt.subplots()
+fig1, ax1 = plt.subplots(figsize=(5, 3))
+fig2, ax2 = plt.subplots(figsize=(5, 3))
 
 for index in range(len(targets)):
     # Set up initial parameters

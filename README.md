@@ -7,4 +7,4 @@ This simulation attempts to discover a simple strategy for the player to keep hi
 
 Initial amount in the simulation has been set to 10,000 and the wager is fixed at 100 for all games. There are 5 different players with different target points that play a maximum of 1000 games. The games aren't continued if they go broke.
 
-![Link](./example/amount_plot.png) ![Link](./example/score_plot.png)
+![](./example/amount_plot.png) ![](./example/score_plot.png)
